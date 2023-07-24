@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  .menu {
+    position: relative;
+	z-index: 10;
+  }
+  .pageContainer {
+	position: absolute;
+  }
+}
