@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from './pages/Home/Home';
+import Menus from './pages/Menus/Menus';
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
+        <Route path="/" element={<Menus />}>
           {/* <Route index element={<Movie />} ></Route>
             <Route path='/diretores' element={<Directors/>} />
             <Route path='/adicionar' element={<AddMovie/>} />

@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  .menuHamburguerIcon {
+    position: absolute;
+    font-size: 40px;
+    margin: 5px 0 0 10px;
+    transition: 1s;
+    display: none;
+  }
+  .preContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .menu {
+    position: relative;
+    z-index: 10;
+    transition: 1s;
+  }
+  .pageContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 140px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    .menuHamburguerIcon {
+      display: block;
+    }
+  }
+}
