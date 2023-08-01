@@ -10,18 +10,18 @@
   }
   .preContainer {
     display: flex;
-    flex-direction: row;
-  }
-  .menu {
-    position: relative;
-    z-index: 10;
-    transition: 1s;
-  }
-  .pageContainer {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    right: 140px;
+	flex-direction: column;
+	.menu {
+	  position: relative;
+	  z-index: 10;
+	  transition: 1s;
+	}
+	.pageContainer {
+	  display: flex;
+	  flex-direction: column;
+	  position: relative;
+	  bottom: 100vh;
+	}
   }
 }
 

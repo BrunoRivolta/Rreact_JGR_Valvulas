@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import styles from "./Menus.module.scss";
+import styles from "./PaginaPadrao.module.scss";
 import MenuLateral from "../../components/MenuLateral/MenuLateral";
 import MenuSuperior from "../../components/MenuSuperior/MenuSuperior";
-import {IoMdMenu} from "react-icons/io";
-import Home from "../Home/Home";
+import { IoMdMenu } from "react-icons/io";
+import { Outlet } from "react-router-dom";
 
-export default function Menus() {
+export default function PaginaPadrao() {
   const [menuVisivel, setMenuVisivel] = useState(false);
 
   function menuToogle(): void {
@@ -18,8 +18,12 @@ export default function Menus() {
 
   return (
     <section className={styles.container}>
-        <MenuSuperior />
-		<IoMdMenu className={styles.menuHamburguerIcon} onClick={() => menuToogle()} style={{color: menuVisivel ? "#FFFFFF" : "#000000" }}/>
+      <MenuSuperior />
+      <IoMdMenu
+        className={styles.menuHamburguerIcon}
+        onClick={() => menuToogle()}
+        style={{ color: menuVisivel ? "#00f2ff" : "#FFFFFF" }}
+      />
       <section className={styles.preContainer}>
         <div
           className={styles.menu}
@@ -28,7 +32,7 @@ export default function Menus() {
           <MenuLateral />
         </div>
         <div className={styles.pageContainer}>
-          <Home />
+			<Outlet />
         </div>
       </section>
     </section>
